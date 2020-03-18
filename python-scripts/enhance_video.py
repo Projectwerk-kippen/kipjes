@@ -68,7 +68,7 @@ def enhance_video():
             break
 
     cap.release()
-    out.release()
+    # out.release()
     cv2.destroyAllWindows()
 
 
