@@ -12,6 +12,7 @@ Supervisors: Vere Leybaert, Sara Verlinden, Tomas Norton, Erik Vranken, Meiqing 
 
 import cv2
 from tkinter.filedialog import askopenfile
+import numpy as np
 
 
 def choose_data():

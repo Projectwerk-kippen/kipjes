@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="c:\kipjes\python-scripts\kipjes-env"
+VIRTUAL_ENV="C:\kipjes\python-scripts\kipjes-env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
