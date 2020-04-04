@@ -72,5 +72,24 @@ def enhance_video():
     cv2.destroyAllWindows()
 
 
+video_name = choose_data()
+cap = cv2.VideoCapture(video_name)
+
+fgbg = cv2.bgsegm.createBackgroundSubtractorMOG(history=20, nmixtures=5, backgroundRatio=0.7)
+
+while(1):
+    ret, frame = cap.read()
+
+    fgmask = fgbg.apply(frame)
+
+    cv2.imshow('frame',fgmask)
+    k = cv2.waitKey(30) & 0xff
+    if k == 27:
+        break
+
+cap.release()
+cv2.destroyAllWindows()
+
+
 if __name__ == "__main__":
     enhance_video()

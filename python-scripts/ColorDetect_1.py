@@ -27,7 +27,7 @@ while True:
 
 	yellow_mask = cv2.inRange(hsv, lower_yellow, upper_yellow)
 
-	(_,contours,_) = cv2.findContours(yellow_mask, cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+	(contours,_) = cv2.findContours(yellow_mask, cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 
 	for contour in contours: 		
 		area = cv2.contourArea(contour)

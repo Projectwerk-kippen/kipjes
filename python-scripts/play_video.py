@@ -1,6 +1,5 @@
 """
 Start image analysis.
-
 This specific script filters chicken-occupied pixels out of snapshots from a given recording and plots them in function
 of time.
 
@@ -12,7 +11,6 @@ Supervisors: Vere Leybaert, Sara Verlinden, Tomas Norton, Erik Vranken, Meiqing 
 
 import cv2
 from tkinter.filedialog import askopenfile
-
 
 def choose_data():
     data_video = askopenfile(mode='r')

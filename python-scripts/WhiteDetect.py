@@ -23,9 +23,9 @@ while True:
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
     lower_white=np.array([[0, 0, 180]])
-    white=np.array([[180, 30, 255]])
+    upper_white=np.array([[180, 30, 255]])
 
-    white_mask=cv2.inRange(hsv, lower_white, white)
+    white_mask=cv2.inRange(hsv, lower_white, upper_white)
 
     (contours,_) = cv2.findContours(white_mask, cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 
